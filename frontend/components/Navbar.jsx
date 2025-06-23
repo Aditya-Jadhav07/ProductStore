@@ -14,13 +14,16 @@ const Navbar = () => {
     <Container maxW={"1140px"} px={4}>
       <Flex
       
-      h={16}
+      h={'auto'}
       alignItems={"center"}
       justifyContent={"space-between"}
       flexDirection={{
         base : "column",
         sm : "row"
       }}
+      gap={{ base: 4, sm: 0 }} // add spacing between elements in column layout
+      py={4}
+
       >
         <Text
         fontSize={{base:"38", sm:"28"}}
@@ -32,14 +35,16 @@ const Navbar = () => {
         ><Link to={"/"}>Product Store 🛒</Link>
         </Text>
 
-        <HStack spacing={2} alignItems={"center"}>
+        <HStack spacing={2} alignItems={"center"}  justifyContent="center"
+  w={{ base: "full", sm: "auto" }} // full width on mobile
+        >
           <Link to={"/create"}>
-          <Button>
+          <Button  w={{ base: "full", sm: "auto" }}>
             <PlusSquareIcon fontSize={20}/>
           </Button>
           </Link>
 
-          <Button onClick={toggleColorMode}>
+          <Button onClick={toggleColorMode}  w={{ base: "full", sm: "auto" }}>
           {colorMode === "light" ?  <IoMoon/>  :  <LuSun size={20}/>}
           </Button>
 

@@ -44,7 +44,7 @@ const HomePage = () => {
          {products.length === 0 && <Text fontSize={"xl"}
         fontWeight={"bold" }
         color={'gray.500'}>
-          No Prducts Found 🥹 {" "}
+          No Products Found 🥹 {" "}
           <Link to={"/create"}>
           <Text as='span' color={'blue.500'} _hover={{textDecoration : "underline"}}>Create a Product. </Text>
           </Link>
