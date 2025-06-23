@@ -44,7 +44,12 @@ const Navbar = () => {
           </Button>
           </Link>
 
-          <Button onClick={toggleColorMode}  w={{ base: "full", sm: "auto" }}>
+          <Button onClick={toggleColorMode}  w={{ base: "full", sm: "auto" }} minW="40px"
+            h="40px"
+            p={0}
+            display="flex"
+            alignItems="center"
+            justifyContent="center">
           {colorMode === "light" ?  <IoMoon/>  :  <LuSun size={20}/>}
           </Button>
 
